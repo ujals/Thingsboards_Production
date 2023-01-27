@@ -1,0 +1,409 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "5485c6b8-32c4-c4be-140a-3bfa7c1509ae" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#30304c",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\r\n    <div class=\"container\">\r\n        <main class=\"grid\">\r\n             <article>\r\n                  <img src=\"https://www.goodricke.com/assets/images/tea-gardens/title-images/danguajhar.png\" >\r\n      <div id=View class=\"text\">\r\n        <h3>Danguajhar Tea Estate</h3><br>\r\n     <button class=\"button\">view</button>\r\n      </div>\r\n                </article>\r\n          </main>\r\n    </div>\r\n</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nbody {\n    padding: 40px 0;\n    text-align: center;\n}\n\n.grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n    grid-gap: 100px;\n    align-items: stretch;\n}\n\n.grid>article img {\n    max-width: 100%;\n    margin-top: 15px;\n}\n\n.text {\n    padding: 5px;\n    text-align: center;\n    color: rgb(255, 255, 255);\n    font-family: Helvetica;\n    margin-bottom:100px ;\n}\n\n.button {\n    background-color: rgb(97, 89, 202);\n    border-radius: 6px;\n    padding: 15px 55px;\n    color: white;\n    border: none;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 18px;\n    font-family: helvetica;\n    font-weight: 500;\n    position: absolute;\n    cursor: pointer;\n    margin-left: -67px;\n    opacity: 1;\n    transition: 0.2s;\n}\n\n.button:hover {\n    opacity: 2;\n    background-color: rgb(97, 89, 202);\n    display: inline-block;\n    padding: 16px 60px;\n    font-size: 20px;\n    cursor: pointer;\n\n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "8px"
+            },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "View",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "4b3dd790-5124-11ed-8727-e71293720446",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "7276e6ec-457e-d9e2-815c-d69952e946cb"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "5485c6b8-32c4-c4be-140a-3bfa7c1509ae"
+        },
+        "20e61a0d-6ba5-25f3-e6c4-ec901f4968ad" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#30304c",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\r\n    <div class=\"container\">\r\n        <main class=\"grid\">\r\n             <article>\r\n                  <img src=\"https://www.goodricke.com/assets/images/tea-gardens/title-images/harchurah.png\" width=\"400px\">\r\n      <div id=View class=\"text\">\r\n        <h3>Harchura Tea Estate</h3><br>\r\n     <button class=\"button\">view</button>\r\n      </div>\r\n                </article>\r\n          </main>\r\n    </div>\r\n</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nbody {\n    padding: 40px 0;\n    text-align: center;\n}\n\n.grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n    grid-gap: 100px;\n    align-items: stretch;\n}\n\n.grid>article img {\n    max-width: 100%;\n    margin-top: 15px;\n}\n\n.text {\n    padding: 5px;\n    text-align: center;\n    color: rgb(255, 255, 255);\n    font-family: Helvetica;\n    margin-bottom:100px ;\n}\n\n.button {\n    background-color: rgb(97, 89, 202);\n    border-radius: 6px;\n    padding: 15px 55px;\n    color: white;\n    border: none;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 18px;\n    font-family: helvetica;\n    font-weight: 500;\n    position: absolute;\n    cursor: pointer;\n    margin-left: -67px;\n    opacity: 1;\n    transition: 0.2s;\n}\n\n.button:hover {\n    opacity: 2;\n    background-color: rgb(97, 89, 202);\n    display: inline-block;\n    padding: 16px 60px;\n    font-size: 20px;\n    cursor: pointer;\n\n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "8px"
+            },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "headerButton" : [ ],
+              "elementClick" : [ {
+                "name" : "View",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "6a87f660-43cf-11ed-8727-e71293720446",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "d5577a8a-34db-7251-1989-cc715b5db9c6"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "20e61a0d-6ba5-25f3-e6c4-ec901f4968ad"
+        },
+        "b0a6ae57-237b-b050-021f-1a707c35406b" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#30304c",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\r\n    <div class=\"container\">\r\n        <main class=\"grid\">\r\n             <article>\r\n                  <img src=\"https://www.goodricke.com/assets/images/tea-gardens/title-images/aibheel.png\" width=\"600px\"> \r\n      <div  class=\"text\">\r\n        <h3>Aibheel Tea Estate</h3><br>\r\n     <button id=\"View\" class=\"button\">view</button>\r\n      </div>\r\n                </article>\r\n          </main>\r\n    </div>\r\n</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nbody {\n    padding: 40px 0;\n    text-align: center;\n}\n\n.grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n    grid-gap: 100px;\n    align-items: stretch;\n}\n\n.grid>article img {\n    max-width: 100%;\n    margin-top: 15px;\n}\n\n.text {\n    padding: 5px;\n    text-align: center;\n    color: rgb(255, 255, 255);\n    font-family: Helvetica;\n    margin-bottom:100px ;\n}\n\n.button {\n    background-color: rgb(97, 89, 202);\n    border-radius: 6px;\n    padding: 15px 55px;\n    color: white;\n    border: none;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 18px;\n    font-family: helvetica;\n    font-weight: 500;\n    position: absolute;\n    cursor: pointer;\n    margin-left: -67px;\n    opacity: 1;\n    transition: 0.2s;\n}\n\n.button:hover {\n    opacity: 2;\n    background-color: rgb(97, 89, 202);\n    display: inline-block;\n    padding: 16px 60px;\n    font-size: 20px;\n    cursor: pointer;\n\n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "8px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "View",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "a5de1070-4b89-11ed-8727-e71293720446",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "61ad8b7a-30d6-56b8-46b8-457c99e06014"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b0a6ae57-237b-b050-021f-1a707c35406b"
+        },
+        "57a61c47-dec9-5eef-9a5a-9803164880b7" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#30304c",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div id='Home' class='card'><img src=\"https://cdn.shopify.com/s/files/1/0550/2396/0284/files/Goodricke-logo-Green-04-2_190x.png?v=1633069416\">\n</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #30302c;\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    justify-content: left;\n    margin-left:15px;\n    margin-top:5px;\n}\n\n"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "7px"
+            },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "Home",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "f863ed90-edfd-11ec-a758-258765964c2a",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "f9a1de9c-9d6c-0952-0299-e30e490ca86e"
+              }, {
+                "name" : "Aibheel",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "85521660-130f-11ed-a758-258765964c2a",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "b7b9d431-f7ae-5114-dd75-35923e1e1952"
+              }, {
+                "name" : "Danguajhar",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "d5dd44c0-1174-11ed-a758-258765964c2a",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "08aefa6b-2570-92b7-c0d7-b65b0dbb9131"
+              }, {
+                "name" : "Harchura",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "5930e4f0-066a-11ed-a758-258765964c2a",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "f3780297-cd66-51c0-873f-aab048dced7d"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "57a61c47-dec9-5eef-9a5a-9803164880b7"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Goodricke Admin Page",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "5485c6b8-32c4-c4be-140a-3bfa7c1509ae" : {
+                  "sizeX" : 16,
+                  "sizeY" : 14,
+                  "row" : 3,
+                  "col" : 34
+                },
+                "20e61a0d-6ba5-25f3-e6c4-ec901f4968ad" : {
+                  "sizeX" : 16,
+                  "sizeY" : 14,
+                  "row" : 3,
+                  "col" : 18
+                },
+                "b0a6ae57-237b-b050-021f-1a707c35406b" : {
+                  "sizeX" : 18,
+                  "sizeY" : 14,
+                  "row" : 3,
+                  "col" : 0
+                },
+                "57a61c47-dec9-5eef-9a5a-9803164880b7" : {
+                  "sizeX" : 50,
+                  "sizeY" : 3,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#22223e",
+                "columns" : 50,
+                "margin" : 14,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "fb3110bc-e53e-43a3-a49e-e815f2f80342" : {
+          "id" : "fb3110bc-e53e-43a3-a49e-e815f2f80342",
+          "alias" : "Dashboard",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "DASHBOARD"
+          }
+        },
+        "c215d000-eac7-25c7-a364-73c872d3a6ea" : {
+          "id" : "c215d000-eac7-25c7-a364-73c872d3a6ea",
+          "alias" : "Current Dashboard",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : {
+              "entityType" : "DASHBOARD",
+              "id" : "f863ed90-edfd-11ec-a758-258765964c2a"
+            }
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1655357215515,
+            "endTimeMs" : 1655443615515
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : false,
+        "showEntitiesSelect" : false,
+        "showDashboardTimewindow" : false,
+        "showDashboardExport" : false,
+        "toolbarAlwaysOpen" : false,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : false,
+        "showUpdateDashboardImage" : false
+      }
+    },
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "5ec690d0-9e05-11ed-a1b6-8fd29fc7adb6"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Goodricke Admin Page",
+    "ownerId" : null,
+    "title" : "Goodricke Admin Page"
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
