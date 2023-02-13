@@ -1,0 +1,27 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "scriptLang" : "JS",
+      "decoder" : "var data = decodeToJson(payload);\r\nvar deviceName= data.name;\r\nvar deviceType='default';\r\nvar decodedpayload=data.decoded.payload;\r\nvar device_id=data.id;\r\ndecodedpayload.device_id=device_id;\r\ndecodedpayload.hotspot_name=data.hotspots[0].name;\r\ndecodedpayload.hotspot_lat=data.hotspots[0].lat;\r\ndecodedpayload.hotspot_long=data.hotspots[0].long;\r\ndecodedpayload.hotspot_freq=data.hotspots[0].frequency;\r\ndecodedpayload.battery=data.decoded.payload.messages[2].battery;\r\ndecodedpayload.CO2=data.decoded.payload.messages[2].measurementValue;\r\ndecodedpayload.Temperature=data.decoded.payload.messages[0].measurementValue;\r\ndecodedpayload.Humidity=data.decoded.payload.messages[1].measurementValue;\r\n\r\n\r\nvar result = {\r\ndeviceName: deviceName,\r\ndeviceType: deviceType,\r\ntelemetry:decodedpayload\r\n};\r\n\r\nfunction decodeToString(payload) {\r\nreturn String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\nvar str = decodeToString(payload);\r\nvar data = JSON.parse(str);\r\nreturn data;\r\n}\r\nreturn result;",
+      "tbelDecoder" : "// Decode an uplink message from a buffer\n// payload - array of bytes\n// metadata - key/value object\n\n/** Decoder **/\n\n// decode payload to string\nvar payloadStr = decodeToString(payload);\n\n// decode payload to JSON\n// var data = decodeToJson(payload);\n\nvar deviceName = 'Device A';\nvar deviceType = 'thermostat';\nvar customerName = 'Customer C';\nvar groupName = 'thermostat devices';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// Result object with device/asset attributes/telemetry data\nvar result = {\n// Use deviceName and deviceType or assetName and assetType, but not both.\n   deviceName: deviceName,\n   deviceType: deviceType,\n// assetName: assetName,\n// assetType: assetType,\n// customerName: customerName,\n   groupName: groupName,\n   attributes: {\n       model: 'Model A',\n       serialNumber: 'SN111',\n       integrationName: metadata['integrationName']\n   },\n   telemetry: {\n       temperature: 42,\n       humidity: 80,\n       rawData: payloadStr\n   }\n};\n\n/** Helper functions 'decodeToString' and 'decodeToJson' are already built-in **/\n\nreturn result;",
+      "encoder" : null,
+      "tbelEncoder" : null
+    },
+    "debugMode" : true,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "fa10d4c0-ab6f-11ed-a1b6-8fd29fc7adb6"
+    },
+    "name" : "Sensecap Co2 T/H",
+    "type" : "UPLINK"
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
