@@ -1,0 +1,27 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "scriptLang" : "JS",
+      "decoder" : "var data = decodeToJson(payload);\r\nvar deviceName= data.name;\r\nvar deviceType='default';\r\nvar decodedpayload=data.decoded.payload;\r\nvar device_id=data.id;\r\ndecodedpayload.device_id=device_id;\r\ndecodedpayload.hotspot_name=data.hotspots[0].name;\r\ndecodedpayload.hotspot_lat=data.hotspots[0].lat;\r\ndecodedpayload.hotspot_long=data.hotspots[0].long;\r\ndecodedpayload.hotspot_freq=data.hotspots[0].frequency;\r\n\r\nvar result = {\r\ndeviceName: deviceName,\r\ndeviceType: deviceType,\r\ntelemetry:decodedpayload\r\n};\r\n\r\nfunction decodeToString(payload) {\r\nreturn String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\nvar str = decodeToString(payload);\r\nvar data = JSON.parse(str);\r\nreturn data;\r\n}\r\nreturn result;",
+      "tbelDecoder" : "var data = decodeToJson(payload);\r\nvar deviceName= data[‘name’];\r\nvar deviceType=default;\r\nvar decodedpayload=data[‘decoded’][‘payload’];\r\nvar device_id=data[‘id’];\r\ndecodedpayload.device_id=device_id;\r\n\r\nvar result = {\r\ndeviceName: deviceName,\r\ndeviceType: deviceType,\r\ngroupName:’Helium Devices’,\r\ntelemetry:decodedpayload\r\n};\r\n\r\nfunction decodeToString(payload) {\r\nreturn String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\nvar str = decodeToString(payload);\r\nvar data = JSON.parse(str);\r\nreturn data;\r\n}\r\nreturn result;",
+      "encoder" : null,
+      "tbelEncoder" : null
+    },
+    "debugMode" : true,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "56c29b60-9575-11ed-8985-5719cee49e73"
+    },
+    "name" : "helium uplink",
+    "type" : "UPLINK"
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
