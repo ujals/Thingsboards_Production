@@ -1,0 +1,36 @@
+{
+  "entityType" : "NOTIFICATION_TEMPLATE",
+  "entity" : {
+    "configuration" : {
+      "deliveryMethodsTemplates" : {
+        "WEB" : {
+          "method" : "WEB",
+          "additionalConfig" : {
+            "icon" : {
+              "enabled" : true,
+              "icon" : "notifications",
+              "color" : "#757575"
+            },
+            "actionButtonConfig" : {
+              "enabled" : false
+            }
+          },
+          "body" : "Severity: ${alarmSeverity}, originator: ${alarmOriginatorEntityType} '${alarmOriginatorName}'",
+          "enabled" : true,
+          "subject" : "Alarm '${alarmType}' - ${action}"
+        }
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_TEMPLATE",
+      "id" : "294e4260-8dd1-11ee-994f-696f2d05cc74"
+    },
+    "name" : "Alarm update notification",
+    "notificationType" : "ALARM"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

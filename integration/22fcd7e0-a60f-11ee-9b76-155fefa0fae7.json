@@ -1,0 +1,58 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "clientConfiguration" : {
+        "host" : "eu1.cloud.thethings.network",
+        "customHost" : false,
+        "port" : 8883,
+        "ssl" : true,
+        "maxBytesInMessage" : 32368,
+        "connectTimeoutSec" : 10,
+        "credentials" : {
+          "type" : "basic",
+          "username" : "nibiaa-sensor-node@ttn",
+          "password" : "NNSXS.EETGJIL22HBULAQLNVHD2FA4NNCU3HUFMIIUN2I.BZEEIZTUOWCMRSGSZECSKLYCMANLIDFV3PSAKHMQM6QX2OYYQFUQ"
+        }
+      },
+      "topicFilters" : [ {
+        "filter" : "v3/+/devices/+/up",
+        "qos" : 0
+      } ],
+      "downlinkTopicPattern" : "v3/nibiaa-sensor-node@ttn/devices/${devId}/down/push"
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "22ea3a40-a60f-11ee-9b76-155fefa0fae7"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "22fcd7e0-a60f-11ee-9b76-155fefa0fae7"
+    },
+    "name" : "TTN-nibiaa",
+    "remote" : false,
+    "routingKey" : "ec946d96-8b0a-5d61-c028-b01c75f4ed02",
+    "secret" : "mm8w92jv8y9ji84giaej",
+    "type" : "TTN"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_nibiaa-dev",
+      "lastUpdateTs" : 1703829444189,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

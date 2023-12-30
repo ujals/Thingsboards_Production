@@ -1,0 +1,103 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "e376db10-8dd2-11ee-994f-696f2d05cc74"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "a86664d0-8dd4-11ee-994f-696f2d05cc74"
+    },
+    "label" : "",
+    "name" : "Chlorine",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "andaman"
+  },
+  "credentials" : {
+    "credentialsId" : "trb1mlrsbj2et5e883xz",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1702877751193,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1702877751193,
+      "longValue" : 1702877751190,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1702877103430,
+      "longValue" : 1702877101399,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "meterPhoto",
+      "lastUpdateTs" : 1701166334479,
+      "longValue" : null,
+      "strValue" : "data:image/jpeg;base64,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"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "type",
+      "lastUpdateTs" : 1701768258634,
+      "longValue" : null,
+      "strValue" : "Cl"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1701768275116,
+      "longValue" : null,
+      "strValue" : "0.62"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1701768289597,
+      "longValue" : null,
+      "strValue" : "0.49"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

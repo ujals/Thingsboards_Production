@@ -1,0 +1,37 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "2943e220-8dd1-11ee-994f-696f2d05cc74"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "1fc4e850-9ca1-11ee-9b76-155fefa0fae7"
+    },
+    "label" : null,
+    "name" : "manual volume",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "manual_entry",
+      "lastUpdateTs" : 1702793318893,
+      "longValue" : null,
+      "strValue" : "2360.00"
+    } ]
+  }
+}

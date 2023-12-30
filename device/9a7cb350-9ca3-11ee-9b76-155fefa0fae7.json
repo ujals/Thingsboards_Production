@@ -1,0 +1,79 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "e376db10-8dd2-11ee-994f-696f2d05cc74"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "9a7cb350-9ca3-11ee-9b76-155fefa0fae7"
+    },
+    "label" : "",
+    "name" : "Manual",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "andaman"
+  },
+  "credentials" : {
+    "credentialsId" : "Vju1h0eQFr4mgGWshZZN",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1702794350905,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "date",
+      "lastUpdateTs" : 1702794753527,
+      "longValue" : null,
+      "strValue" : "23/3/2023"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1702794350914,
+      "longValue" : 1702794350904,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "volume",
+      "lastUpdateTs" : 1702805460908,
+      "longValue" : null,
+      "strValue" : "43"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

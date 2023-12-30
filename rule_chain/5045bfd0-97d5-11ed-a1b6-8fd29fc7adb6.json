@@ -6,7 +6,10 @@
     },
     "configuration" : null,
     "debugMode" : true,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "5045bfd0-97d5-11ed-a1b6-8fd29fc7adb6"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
       "id" : "7d886640-97d6-11ed-a1b6-8fd29fc7adb6"
@@ -52,6 +55,7 @@
           "type" : "anonymous"
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
@@ -61,10 +65,12 @@
       },
       "name" : "API end point",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
     } ],
     "ruleChainConnections" : null
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }

@@ -1,0 +1,27 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "4be3b6c0-8dd1-11ee-994f-696f2d05cc74"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "4be47a10-8dd1-11ee-994f-696f2d05cc74"
+    },
+    "label" : null,
+    "name" : "Main_nibiaa-Dev",
+    "ownerId" : null,
+    "type" : "TbServiceQueue"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -6,10 +6,13 @@
     },
     "configuration" : null,
     "debugMode" : true,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "062371b0-9af3-11ed-aaf5-67d9215a95c9"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "063e73c0-9af3-11ed-aaf5-67d9215a95c9"
+      "id" : "dea19a50-8e98-11ee-994f-696f2d05cc74"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -26,19 +29,19 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 0,
+      "toIndex" : 17,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 18,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 19,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 0,
       "toIndex" : 20,
-      "type" : "Post telemetry"
-    }, {
-      "fromIndex" : 0,
-      "toIndex" : 21,
-      "type" : "Post telemetry"
-    }, {
-      "fromIndex" : 0,
-      "toIndex" : 22,
-      "type" : "Post telemetry"
-    }, {
-      "fromIndex" : 0,
-      "toIndex" : 23,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
@@ -69,43 +72,23 @@
       "toIndex" : 10,
       "type" : "Success"
     }, {
-      "fromIndex" : 10,
-      "toIndex" : 11,
-      "type" : "Updated"
-    }, {
       "fromIndex" : 11,
       "toIndex" : 3,
       "type" : "Success"
     }, {
       "fromIndex" : 14,
       "toIndex" : 15,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 16,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 18,
       "type" : "Created"
     }, {
-      "fromIndex" : 17,
-      "toIndex" : 18,
+      "fromIndex" : 14,
+      "toIndex" : 15,
       "type" : "Updated"
     }, {
-      "fromIndex" : 18,
-      "toIndex" : 19,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 22,
+      "fromIndex" : 19,
       "toIndex" : 2,
       "type" : "Success"
     }, {
-      "fromIndex" : 23,
+      "fromIndex" : 20,
       "toIndex" : 5,
       "type" : "Success"
     } ],
@@ -113,21 +96,23 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 256,
-        "layoutY" : 150
+        "layoutX" : 185,
+        "layoutY" : 292
       },
       "configuration" : {
         "version" : 0
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "063e73c0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea19a50-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "Mesage Type",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     }, {
       "additionalInfo" : {
@@ -138,34 +123,40 @@
       "configuration" : {
         "jsScript" : "var newmsg = {\n    Intensity: msg.decoded.payload.messages[0].measurementValue\n};\nreturn {\n    msg: newmsg\n};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "063fac40-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea1c160-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "Sensecap Light Intensity",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1022,
-        "layoutY" : 525
+        "layoutX" : 944,
+        "layoutY" : 524
       },
       "configuration" : {
-        "jsScript" : "return msg.Soil_temperature >20 ;\r\n"
+        "scriptLang" : "JS",
+        "jsScript" : "return msg.value<3 ;\r\n",
+        "tbelScript" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "063ffa60-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea1c161-8e98-11ee-994f-696f2d05cc74"
       },
-      "name" : "under threshold soil",
+      "name" : "US1",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
@@ -189,21 +180,23 @@
         "username" : "apikey",
         "password" : "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"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06404880-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea1e870-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "email sent",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2278,
-        "layoutY" : 581
+        "layoutX" : 1679,
+        "layoutY" : 541
       },
       "configuration" : {
         "numbersToTemplate" : " +919436234422",
@@ -216,15 +209,17 @@
           "type" : "TWILIO"
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "064096a0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea1e871-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "sms",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.sms.TbSendSmsNode"
     }, {
       "additionalInfo" : {
@@ -235,15 +230,17 @@
       "configuration" : {
         "jsScript" : "return msg.Temperature >40 ;\r\n"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0640e4c0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea20f80-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "under threshold co2,temp",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
@@ -252,20 +249,23 @@
         "layoutY" : 122
       },
       "configuration" : {
-        "telemetry" : false,
-        "attrMapping" : {
+        "dataMapping" : {
           "email" : "customerEmail"
-        }
+        },
+        "dataToFetch" : "ATTRIBUTES",
+        "fetchTo" : "METADATA"
       },
+      "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06410bd0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea20f81-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "customer email",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerAttributeNode"
     }, {
       "additionalInfo" : {
@@ -277,15 +277,17 @@
         "alarmDetailsBuildJs" : "var details = {Temperature: msg.Temperature, count: 1};\r\n\r\nif (metadata.prevAlarmDetails) {\r\n  var prevDetails = JSON.parse(metadata.prevAlarmDetails);\r\n  // remove prevAlarmDetails from metadata\r\n  delete metadata.prevAlarmDetails;\r\n  if (prevDetails.count) {\r\n    details.count = prevDetails.count + 1;\r\n  }\r\n}\r\n\r\nreturn details;\r\n",
         "alarmType" : "General Alarm"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "064159f0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea20f82-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "clear",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
     }, {
       "additionalInfo" : {
@@ -299,17 +301,20 @@
         "sharedAttributeNames" : [ ],
         "serverAttributeNames" : [ "address" ],
         "latestTsKeyNames" : [ ],
-        "getLatestValueWithTs" : false
+        "getLatestValueWithTs" : false,
+        "fetchTo" : "METADATA"
       },
+      "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0641cf20-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea23690-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "address",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     }, {
       "additionalInfo" : {
@@ -320,15 +325,17 @@
       "configuration" : {
         "jsScript" : "metadata.Temperature = msg.Temperature;\r\nreturn {msg: msg, metadata: metadata, msgType: msgType};\r\n"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06421d40-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea23691-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "add temperature to metadata",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -345,15 +352,17 @@
         "dynamicSeverity" : false,
         "relationTypes" : [ ]
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06424450-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea23692-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "alarm",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     }, {
       "additionalInfo" : {
@@ -371,15 +380,17 @@
         "isHtmlTemplate" : null,
         "bodyTemplate" : "Device ${deviceName} has high temperature ${Temperature} .Device address ${ss_address}"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06426b60-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea23693-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "transform msg",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
     }, {
       "additionalInfo" : {
@@ -398,106 +409,47 @@
           "type" : "TWILIO"
         }
       },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0642b980-9af3-11ed-aaf5-67d9215a95c9"
-      },
-      "name" : "sms",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.sms.TbSendSmsNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1276,
-        "layoutY" : 556
-      },
-      "configuration" : {
-        "alarmDetailsBuildJs" : "var details = {Soil_temperature: msg.Soil_temperature, count: 1};\r\n\r\nif (metadata.prevAlarmDetails) {\r\n  var prevDetails = JSON.parse(metadata.prevAlarmDetails);\r\n  // remove prevAlarmDetails from metadata\r\n  delete metadata.prevAlarmDetails;\r\n  if (prevDetails.count) {\r\n    details.count = prevDetails.count + 1;\r\n  }\r\n}\r\n\r\nreturn details;\r\n",
-        "alarmType" : "General Alarm"
-      },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06432eb0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea25da0-8e98-11ee-994f-696f2d05cc74"
+      },
+      "name" : "sms",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.sms.TbSendSmsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1283,
+        "layoutY" : 598
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "if(true)\n{\n    return false;\n}",
+        "alarmDetailsBuildTbel" : null,
+        "alarmType" : "General Alarm"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "dea25da1-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "clear",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1276,
-        "layoutY" : 504
-      },
-      "configuration" : {
-        "telemetry" : true,
-        "attrMapping" : {
-          "email" : "customerEmail"
-        }
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "064355c0-9af3-11ed-aaf5-67d9215a95c9"
-      },
-      "name" : "customer email",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetCustomerAttributeNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1546,
-        "layoutY" : 503
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "address" ],
-        "latestTsKeyNames" : [ ],
-        "getLatestValueWithTs" : false
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "06437cd0-9af3-11ed-aaf5-67d9215a95c9"
-      },
-      "name" : "address",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1803,
-        "layoutY" : 503
-      },
-      "configuration" : {
-        "jsScript" : "metadata.Soil_temperature = msg.Soil_temperature;\r\nreturn {msg: msg, metadata: metadata, msgType: msgType};\r\n"
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0643caf0-9af3-11ed-aaf5-67d9215a95c9"
-      },
-      "name" : "add temperature to metadata",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 2099,
-        "layoutY" : 502
+        "layoutX" : 1288,
+        "layoutY" : 420
       },
       "configuration" : {
         "alarmType" : "General Alarm",
@@ -508,50 +460,53 @@
         "dynamicSeverity" : false,
         "relationTypes" : [ ]
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0643f200-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea284b2-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "alarm",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2447,
-        "layoutY" : 503
+        "layoutX" : 1643,
+        "layoutY" : 413
       },
       "configuration" : {
         "fromTemplate" : "info@nibiaa.com",
-        "toTemplate" : "avicii.9813@gmail.com",
+        "toTemplate" : "ujal@nibiaa.com",
         "ccTemplate" : null,
         "bccTemplate" : null,
-        "subjectTemplate" : "Device ${deviceType} temperature high",
-        "mailBodyType" : "false",
-        "isHtmlTemplate" : null,
-        "bodyTemplate" : "Device ${deviceName} has high temperature ${Soil_temperature} .Device address ${ss_address}"
+        "subjectTemplate" : "Device ${deviceType} waterlevel low",
+        "mailBodyType" : "true",
+        "bodyTemplate" : "Device ${Device} shows that tank 1 has low water level ${value}meter .\n"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06450370-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea284b3-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "transform msg",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2724,
-        "layoutY" : 503
+        "layoutX" : 1971,
+        "layoutY" : 411
       },
       "configuration" : {
-        "useSystemSmtpSettings" : false,
+        "useSystemSmtpSettings" : true,
         "smtpProtocol" : "smtps",
         "smtpHost" : "smtp.sendgrid.net",
         "smtpPort" : 465,
@@ -564,17 +519,19 @@
         "proxyUser" : null,
         "proxyPassword" : null,
         "username" : "apikey",
-        "password" : "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"
+        "password" : "AC328dd6770d066cedf655f21954d36abd"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06455190-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea2abc0-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "email sent",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     }, {
       "additionalInfo" : {
@@ -585,15 +542,17 @@
       "configuration" : {
         "jsScript" : "var newmsg = {\n    Battery: msg.decoded.payload.BATV,\n    Bat: msg.decoded.payload.Bat,\n    TempC1: msg.decoded.payload.TempC1,\n\n};\nreturn {\n    msg: newmsg\n};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06459fb0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea2abc1-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "Dragino Temprature Decoder",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -604,15 +563,17 @@
       "configuration" : {
         "jsScript" : "var newmsg = {\n    Battery: msg.decoded.payload.BATV,\n    Bat: msg.decoded.payload.Bat,\n    PH1_SOIL: msg.decoded.payload.PH1_SOIL,\n    TEMP_SOIL: msg.decoded.payload.TEMP_SOIL,\n    conduct_SOIL: msg.decoded.payload.conduct_SOIL,\n    temp_SOIL: msg.decoded.payload.temp_SOIL,\n    water_SOIL: msg.decoded.payload.water_SOIL,\n    RFID: msg.decoded.payload.RFID_int,\n    latitude: msg.decoded.payload.latitude,\n    longitude: msg.decoded.payload.longitude,\n};\nreturn {\n    msg: newmsg\n};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0645edd0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea2abc2-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "Node Decoder",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -621,17 +582,21 @@
         "layoutY" : 249
       },
       "configuration" : {
-        "jsScript" : "var newmsg = {\n    Soil_temperature: msg.decoded.payload.messages[0].measurementvalue3,\n    Soil_moisture: msg.decoded.payload.messages[1].measurementvalue3,\n    Soil_EC: msg.decoded.payload.messages[2].measurementvalue3\n};\nreturn {\n    msg: newmsg\n};"
+        "scriptLang" : "JS",
+        "jsScript" : "// Define the device name to filter messages\r\nvar targetDevice = \"Ultrasonic_lwvwl_1\";\r\n\r\n// Check if the incoming message is from the specified device\r\nif (msg.Device == targetDevice) {\r\n    // Create the modified message structure\r\n    var modifiedMessage = {\r\n        \"value\": msg.value,\r\n        \"Device\": msg.Device,\r\n        \"latitude\": msg.latitude,\r\n        \"longitude\": msg.longitude\r\n    };\r\n\r\n    // Return the modified message\r\n    return {\r\n        msg: modifiedMessage\r\n    };\r\n} else {\r\n    // If the message is not from the specified device, return null or handle accordingly\r\n    return null;\r\n}\r\n",
+        "tbelScript" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06463bf0-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea2abc3-8e98-11ee-994f-696f2d05cc74"
       },
-      "name" : "Sensecap Soil T/H Script",
+      "name" : "Ultrasonic Level sensor",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -642,19 +607,22 @@
       "configuration" : {
         "jsScript" : "var newmsg = {\n    CO2: msg.decoded.payload.messages[0].measurementValue,\n    Temperature: msg.decoded.payload.messages[1].measurementValue,\n    Humidity: msg.decoded.payload.messages[2].measurementValue,\n};\nreturn {\n    msg: newmsg\n};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : true,
+      "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0646b120-9af3-11ed-aaf5-67d9215a95c9"
+        "id" : "dea2d2d0-8e98-11ee-994f-696f2d05cc74"
       },
       "name" : "Sensecap T/H Script",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }

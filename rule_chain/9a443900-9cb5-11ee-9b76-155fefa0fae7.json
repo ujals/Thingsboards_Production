@@ -1,0 +1,91 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "f0ff5720-9cba-11ee-9b76-155fefa0fae7"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "9a443900-9cb5-11ee-9b76-155fefa0fae7"
+    },
+    "name" : "message",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 1,
+      "toIndex" : 0,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 1,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 967,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c13462b0-9cba-11ee-9b76-155fefa0fae7"
+      },
+      "name" : "save",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 417,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Manual",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f0ff5720-9cba-11ee-9b76-155fefa0fae7"
+      },
+      "name" : "aa",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
